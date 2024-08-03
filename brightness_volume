@@ -1,0 +1,17 @@
+sudo pacman -S xorg-xbacklight alsa-utils
+
+nano ~/.config/awesome/rc.lua
+
+
+### To access the brightness
+$ echo 5 | sudo tee /sys/class/backlight/intel_brightness/brightness
+
+0 to 96000 
+
+### To access the volume
+
+$ pactl list sinks 
+$ pactl set-sink-volume 50 +10% 
+
+$ wpctl get-volume 50 				## to get the volume
+

@@ -1,0 +1,19 @@
+$ lsblk    # list block devices
+$ fdisk -lh
+
+# Identify the type of file system
+
+$ sudo mount /dev/sda1 /mnt
+
+# If ntfs
+
+$ sudo pacman -S ntfs-3g
+$ sudo mount -t ntfs-3g /dev/sda1 /mnt 
+
+# mounted to the /mnt/
+
+$ sudo mkdir -p /mnt/usb_point1
+
+$ sudo umount /mnt
+
+$ df -h

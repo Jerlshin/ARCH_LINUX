@@ -1,0 +1,5 @@
+$ unzip -l file.zip | awk '/\/$/ {print $4}'  | awk -F'/' '{print$1}' | sort -u 
+
+# / = delimit the pattern 
+# \/ = search for a literal forward slash
+# $ = end of the line, as the line should end with /

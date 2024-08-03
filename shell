@@ -1,0 +1,5 @@
+To change the shell 
+
+$ chsh -l   # to list all the available shells 
+$ chsh -s /usr/bin/<shell>
+

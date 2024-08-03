@@ -1,0 +1,9 @@
+Download the "xorg-server" "xorg-xinput" xf86-input-libinput". 
+
+make a config file in the, 
+
+/etc/X11/xorg.conf.d/40-libinput.conf 
+
+Check with AI 
+
+Config this file 

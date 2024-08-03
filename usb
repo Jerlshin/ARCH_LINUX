@@ -1,0 +1,5 @@
+$ lsblk 			# identifying the USB drive 
+$ lsblk -f 
+$ sudo mount -t exfat /dev/sda1 /mnt/seagate/		# to mount the exfat block 
+$ sudo mount -t ntfs /dev/sdb1 /mnt/jerlshin/
+$ sudo umount /mnt/jerlshin   # to un mount the drive 

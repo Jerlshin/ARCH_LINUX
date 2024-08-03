@@ -1,0 +1,11 @@
+### BATTERY 
+
+sudo pacman -S acpi 
+
+
+$ acpi -V
+
+### SYSTEM STATUS
+
+$ bashtop 
+$ bpytop

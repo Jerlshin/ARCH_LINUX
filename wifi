@@ -1,0 +1,9 @@
+$ nmcli connection up VITC-HOS2-4
+$ nmcli connection add type wifi ifname wlan0 con-name VITC-HOS2-4 ssid VITC-HOS2-4 -- wifi-sec.key-mgmt wpa-eap 802-1x.eap peap 802-1x.identity 21brs1720 802-1x.password 1720 802-1x.phase2-auth mschapv2
+
+$ nmcli device status
+
+$ nmcli connection show 
+$ nmcli device wifi connect <SSID> 
+$ nmcli device wifi connect <SSID> password <passwd>
+$ nmcli device wifi list 
