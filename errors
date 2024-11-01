@@ -1,0 +1,3 @@
+$ journalctl -b -1 
+$ dmseg | grep -i <key_word>
+

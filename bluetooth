@@ -16,3 +16,25 @@ $ trust <MAC>
 
 AUTOMATE THE CONNECTION
 
+$ rfkill list
+
+# if it is hard or soft blocked, unblock it 
+
+$ sudo rfkill unblock bluetooth
+
+
+---
+
+sudo systemctl restart bluetooth
+
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+sudo systemctl status bluetooth
+
+$ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth
+
+----
+
+$ devices
+$ remove <MAC>
+

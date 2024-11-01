@@ -1,0 +1,34 @@
+KVM (Kernal-based VM)
+  - KVM is a linux kernal module that turns that Linux kernel into a hypervisor. It enables the linux OS to acts as host for VMs. 
+  - KVM provides the core virtualization infrastructure for Linux, including the ablity to create and manage virtual CPUs, memory and I/O devices for guest OS 
+  - KVM is integrated into Linux Kernal-based
+  - KVM leverages hardware virtualization extensions such as Intel VT-x and AMD-V to improve performace and efficiency 
+
+
+
+QEMU (Quick Emulator):
+  - Open source emulator and virtualization tool that provides emulation of hardware components and VMs. 
+  QEMU can operate in two modes: 
+    * full system emulator
+    * user-space emulator
+
+
+
+Hypervisor:
+  - Software layer or hardware-based system that enables virtualization by creating and managing VMs on host system. 
+  - it acts as an intermediary between the physical hardware and the VM, allowing multiple OS to run simultaneously on a single physical machine. 
+
+  2 types of hypervisor:
+    - Type1: Bare-Metal Hypervisor
+        * runs directly on the host's physical hardware, without need for a traditional OS.   - Type2: Hosted Hypervisor
+        * runs on top of host OS. it relies on the host OS for hardware access and management
+
+
+---------
+
+$ sudo pacman -S qemu libvirt virt-manager
+
+# Installing TempleOS
+
+$ qemu-img create -f qcow2 TempleOS.ISO 100M
+

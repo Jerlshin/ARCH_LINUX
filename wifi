@@ -7,3 +7,75 @@ $ nmcli connection show
 $ nmcli device wifi connect <SSID> 
 $ nmcli device wifi connect <SSID> password <passwd>
 $ nmcli device wifi list 
+$ nmcli con delete VITC-HOS2-4
+
+TO CONNECT TO WPA2 PROPRIETARY WIFI 
+""""
+nmcli connection add \
+                                           type wifi con-name "VITC-HOS2-4" ifname wlan0 ssid "VITC-HOS2-4" -- \
+                                           wifi-sec.key-mgmt wpa-eap \
+                                           802-1x.eap peap \
+                                           802-1x.identity "21brs1720" \
+                                           802-1x.password "1720" \
+                                           802-1x.phase2-auth mschapv2
+""""
+
+$ nmcli connection up <con-name>
+
+# nmcli -> network manager command line program
+
+$ nmcli device show wlan0
+$ nmcli device show wlan0 | grep IP4 
+
+#-----------------------------------------------------------
+# Connecting to public wifi 
+
+# add network connection
+$ nmcli connection add type wifi con-name VITC-HOS2-4 ifname wlan0 ssid VITC-HOS2-4
+
+# configure 802.1x settings 
+
+nmcli connection modify VITC-HOS2-4 \                              (base) 
+                           802-1x.eap peap \
+                           802-1x.identity "21brs1720" \
+                           802-1x.password "1720" \
+                           802-1x.phase2-auth mschapv2 \
+                           wifi-sec.key-mgmt wpa-eap
+
+$ nmcli device status
+$ sudo ip link set wlan0 up 
+$ sudo iw dev wlan0 scan       
+
+
+# ensure no other process is using wifi 
+
+$ sudo lsof /sys/class/net/wlan0  
+$ sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+$ sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+# obtain an IP address 
+$ sudo dhcpcd wlan0
+
+
+$ nmcli connection show
+$ nmcli connection show <VITC-HOS2-4>
+
+## FOR visual editor
+$ sudo nm-connection-editor
+
+$ nmcli connection show VITC-HOS2-4
+
+
+## To see to which wifi nmcli is connected 
+
+$ nmcli connection show --active 
+
+
+$ sudo systemctl stop NetworkManager
+$ sudo systemctl stop wpa_supplicant
+
+# obtain an IP address.
+$ sudo dhcpcd wlan0
+
+
