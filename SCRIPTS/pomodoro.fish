@@ -1,4 +1,4 @@
-# ~/pomodoro.fish
+#!/usr/bin/env fish
 
 function pomodoro
     set -l work_time 25  # Work duration in minutes
@@ -35,3 +35,4 @@ function pomodoro
     mpv $sound_path
 end
 
+pomodoro
