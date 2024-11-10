@@ -30,3 +30,8 @@ $ jupyter nbconvert --to pdf file.ipynb
 
 $ pdftk file1.pdf file2.pdf cat output combined.pdf
 
+# Pymodoro
+
+$ pymodoro -w 30 -b 10              # 30 mins work, 10 mins rest
+$ pymodoro -l 4                     # 4 loop cycles 
+
