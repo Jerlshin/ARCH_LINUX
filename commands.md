@@ -83,3 +83,13 @@ $ find . -type f -exec mv {} ./folder \;
 To reset the terminal 
 
 $ reset 
+
+## File Management
+
+Find files faster
+
+$ fd search-term
+
+Powerfull disk usage analyzer
+
+$ ncdu
