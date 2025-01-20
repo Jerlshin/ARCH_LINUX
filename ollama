@@ -4,3 +4,7 @@
 > phi3:mini
 > qwen:0.5b
 
+
+$ ollama start
+$ ollama run <model> <query>
+$ ollama list
