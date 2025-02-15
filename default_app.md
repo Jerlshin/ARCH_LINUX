@@ -9,4 +9,9 @@ $ find /usr/share/applications/ -name '*microsoft*'
 $ nvim ~/.config/mimeapps.list
 $ xdg-settings get default-web-browser
 
+# Early OOM Daemon
+
+This daemon will kill memory-hogging processes before the system freezes completely
+
+$ sudo systemctl start earlyoom
 
