@@ -78,4 +78,23 @@ $ sudo systemctl stop wpa_supplicant
 # obtain an IP address.
 $ sudo dhcpcd wlan0
 
+################################################
+
+# Check for WiFi Driver Issues
+
+$ lspci -k | grep -A 3 -i network
+$ lsmod | grep wifi
+
+### Check if the interface Exists
+
+$ ip link show | grep wl 
+$ iw dev
+
+## Check if Wi-Fi is Blocked
+
+$ rfkill list all 
+$ rfkill unblock all
+
+$ sudo systemctl restart NetworkManager
+
 

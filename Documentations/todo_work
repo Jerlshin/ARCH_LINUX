@@ -1,0 +1,24 @@
+1. Take pics of all the rice seeds (13 varieties)
+2. Run the model (k-fold cross validation)
+
+Make a proper dataset for morphological feature extraction. 
+Take a proper image without any light distortion
+3. Extract features from all the seeds and store all the category for the seeds in one file
+4. implement dimensionality reduction
+5. Make a PPT 
+
+6. find new morphological feature extraction techniques
+7. make something new
+
+8. In the PPT, explain the process of the segmentation, and measurements
+
+9. Make the instance segmentation of the model
+
+10. 
+
+
+--
+Get ready. brush and bathroom
+
+Exercise 
+and then, do the image capturing.. 

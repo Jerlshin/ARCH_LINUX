@@ -93,3 +93,36 @@ $ fd search-term
 Powerfull disk usage analyzer
 
 $ ncdu
+
+# To deep move files from many directories to another directory
+
+$ find . -name 'extractions' -type d -print0 | xargs -0 -I {} sh -c 'cp -rt ../../Rice_RGB/Chithrakar/ {}/*'
+
+```
+-print0: it prints full path of each found directory, seperated by a null character \0 
+
+xargs -0 -I {}: takes the null-seperated input from the pipe and prepares it for the cp command. -0 tells xargs to expect null-seperated input. -I {} placeholder, xargs will replace this placeholder with each directory path it receives. 
+
+
+sh -c "...." : runs a command within a new Shell
+
+cp -rt /path/ {}/* : -r for recursive. -t to specify target, 
+```
+
+## To copy large files from one directory to another directory
+
+$ rsync --parital --progress <source_file> <destination_file>
+$ rsync -P <source_file> <destination_file>
+
+To preserve the attributes
+$ rsync -aP <source_file> <destination_file>
+
+### To see the progress of the operation
+
+
+## To check the battery percentage
+
+$ cat /sys/class/power_supply/BAT0/capacity
+$ cat /sys/class/power_supply/BAT0/status
+
+
