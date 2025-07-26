@@ -61,4 +61,8 @@ Exit and return to your regular user
 $ \q 
 $ exit 
 
+## MPV
 
+- To display with milliseconds
+
+$ mpv --osd-fractions <video>.mp4

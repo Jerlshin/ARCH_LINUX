@@ -9,3 +9,11 @@ $ export INSTALL4J_JAVA_HOME="/usr/lib/jvm/java-11-openjdk"  # add to fish/zshrc
 
 # To config the input to the system 
 $ sudo nvim /etc/X11/xorg.conf.d/40-libinput.conf 
+
+# Getting system information
+Using 'dmidecode'
+
+$ sudo dmidecode -s system-manufacturer
+$ sudo dmidecode -s system-product-name
+$ sudo dmidecode -s system-version
+$ sudo dmidecode -s baseboard-product-name

@@ -125,4 +125,20 @@ $ rsync -aP <source_file> <destination_file>
 $ cat /sys/class/power_supply/BAT0/capacity
 $ cat /sys/class/power_supply/BAT0/status
 
+# To view synchronous files
 
+$ less -f output.txt 
+
+# Packages
+
+Queries the packages database.
+
+$ pacman -Q
+
+To see only the packages that you explicitly installed
+
+$ pacman -Qe
+
+If you just want a clean list of package names without the version numbers
+
+$ pacman -Qq

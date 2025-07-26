@@ -5,3 +5,13 @@ $ ifstat
 # to check the network speed
 
 # speedtest-cli
+#
+
+# openfortivpn
+
+$ sudo openfortivpn 115.240.194.55:10443 \                                      
+                       --username 21BRS1720 \
+                       --trusted-cert b83a7afbe6a28567bcb292d2d21d9cc4b22049ae1558e1f4218f71fdea8fc992
+
+$ ping 172.16.8.151
+$ 

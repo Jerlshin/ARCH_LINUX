@@ -28,4 +28,15 @@ $ sudo reboot
 
 $ swapon --show
 
+## Identifying the running processes
+
+$ ps aux
+
+Searches for processes based on their name or other attributes.
+
+$ pgrep <package_name>
+
+## To remove a package completely with all its files.
+
+$ sudo pacman -Rns <name>
 
